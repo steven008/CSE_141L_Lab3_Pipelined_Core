@@ -1,0 +1,89 @@
+{C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling module reg_file
+
+Top level modules:
+	reg_file
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package core_tb_sv_unit
+-- Compiling module core_tb
+
+Top level modules:
+	core_tb
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package instr_mem_sv_unit
+-- Compiling module instr_mem
+
+Top level modules:
+	instr_mem
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package net_packet_logger_s_sv_unit
+-- Compiling module network_packet_s_logger
+
+Top level modules:
+	network_packet_s_logger
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package alu_sv_unit
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package core_flattened_sv_unit
+-- Compiling module core_flattened
+
+Top level modules:
+	core_flattened
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package data_mem_sv_unit
+-- Compiling module data_mem
+
+Top level modules:
+	data_mem
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package miner_tb_sv_unit
+-- Compiling module miner_tb
+
+Top level modules:
+	miner_tb
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package cl_decode_sv_unit
+-- Compiling module cl_decode
+
+Top level modules:
+	cl_decode
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+-- Compiling package cl_state_machine_sv_unit
+-- Compiling module cl_state_machine
+
+Top level modules:
+	cl_state_machine
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+
+Top level modules:
+	--none--
+
+} {} {}} {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/disassemble.sv} {1 {vlog -work work -sv {C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/disassemble.sv}
+Model Technology ModelSim ALTERA vlog 10.1e Compiler 2013.06 Jun 12 2013
+
+} {} {}}

@@ -1,0 +1,509 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Steven\Desktop\cse 141L Lab 2 part 2
+valu
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 DXx4 work 11 alu_sv_unit 0 22 MO]82]PN?`66QCn@gnSbA3
+Z3 VI7lk`SQ8Za@A6?2c<@gWI2
+r1
+31
+Z4 !s100 GR0YKXjMHND[E<J1<ZUko0
+Z5 IcBPMSIN`1aNXWUk91:oB32
+Z6 !s105 alu_sv_unit
+S1
+Z7 dC:\Users\Steven\Desktop\cse 141L Lab 3\3 stage pipeline
+Z8 w1430447576
+Z9 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv
+Z10 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv
+L0 4
+Z11 OV;L;10.1e;51
+Z12 !s108 1431918757.696000
+Z13 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv|
+Z14 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/alu.sv|
+Z15 o-work work -sv -O0
+!s85 0
+!i10b 1
+!s101 -O0
+Xalu_sv_unit
+R1
+Z16 VMO]82]PN?`66QCn@gnSbA3
+r1
+31
+Z17 !s100 7B[izam^zfXGhlAlE0;Ta3
+Z18 IMO]82]PN?`66QCn@gnSbA3
+S1
+R7
+Z19 w1431906221
+R9
+R10
+Z20 Fdefinitions.sv
+L1 53
+R11
+R12
+R13
+R14
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcl_decode
+R1
+Z21 DXx4 work 17 cl_decode_sv_unit 0 22 m9@PW1X[EcQTWVLV839]L3
+Z22 VBlHjYERonTdR[3Tdm[Adl1
+r1
+31
+Z23 IdODZb:nVA:OQAWF2FSRjE0
+Z24 !s105 cl_decode_sv_unit
+S1
+R7
+Z25 w1431906799
+Z26 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv
+Z27 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv
+L0 4
+R11
+Z28 !s108 1431918757.946000
+Z29 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv|
+Z30 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_decode.sv|
+R15
+Z31 !s100 b7GM8>flFR[z4C:YDBI[73
+!s85 0
+!i10b 1
+!s101 -O0
+Xcl_decode_sv_unit
+R1
+Z32 Vm9@PW1X[EcQTWVLV839]L3
+r1
+31
+Z33 !s100 6cMNnWnkF@D?TPW3Z3zZF2
+Z34 Im9@PW1X[EcQTWVLV839]L3
+S1
+R7
+R25
+R26
+R27
+R20
+L1 53
+R11
+R28
+R29
+R30
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcl_state_machine
+R1
+Z35 DXx4 work 24 cl_state_machine_sv_unit 0 22 JbZAF>F1jQWE2hLMP1i^21
+Z36 V_HO6g@<O=0IE^>?5Z5=h`1
+r1
+31
+Z37 !s100 OM`[1CRlP@^fIF_^_NTE:0
+Z38 IW8XGjdo8WN=cG14AHboH>2
+Z39 !s105 cl_state_machine_sv_unit
+S1
+R7
+Z40 w1430388131
+Z41 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv
+Z42 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv
+L0 3
+R11
+Z43 !s108 1431918758.087000
+Z44 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv|
+Z45 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/cl_state_machine.sv|
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+Xcl_state_machine_sv_unit
+R1
+Z46 VJbZAF>F1jQWE2hLMP1i^21
+r1
+31
+Z47 !s100 ^HaMcKfQ;o>CdEoIEVXRe3
+Z48 IJbZAF>F1jQWE2hLMP1i^21
+S1
+R7
+R19
+R41
+R42
+R20
+L1 53
+R11
+R43
+R44
+R45
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vcore
+R1
+Z49 DXx4 work 12 core_sv_unit 0 22 [VVL=30IS=[Vncj3TkjU;0
+Z50 V8g;U8en<PLBg@@AL4CL>f3
+r1
+!s85 0
+31
+!i10b 1
+!s100 n97C7F1H9<M^HoB3KlEAf0
+I7oIfHz];hhJFUFBXRSWIA3
+Z51 !s105 core_sv_unit
+S1
+R7
+Z52 w1431918627
+Z53 8C:\Users\Steven\Desktop\cse 141L Lab 3\3 stage pipeline\core.sv
+Z54 FC:\Users\Steven\Desktop\cse 141L Lab 3\3 stage pipeline\core.sv
+L0 3
+R11
+Z55 !s108 1431918759.133000
+Z56 !s107 definitions.sv|C:\Users\Steven\Desktop\cse 141L Lab 3\3 stage pipeline\core.sv|
+Z57 !s90 -reportprogress|300|-work|work|-sv|C:\Users\Steven\Desktop\cse 141L Lab 3\3 stage pipeline\core.sv|
+!s101 -O0
+R15
+vcore_flattened
+R1
+Z58 DXx4 work 22 core_flattened_sv_unit 0 22 <QX1gJDo>X9VLZ4jLZ]0`0
+Z59 V2R0=69R;zAfBGzKl1Q]2X0
+r1
+31
+Z60 !s100 TB>2B<njPPdRe6zR0=eCd1
+Z61 IiMLWDfK[<cHAPcZWNZQ5k1
+Z62 !s105 core_flattened_sv_unit
+S1
+R7
+Z63 w1430256429
+Z64 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv
+Z65 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv
+L0 4
+R11
+Z66 !s108 1431918758.227000
+Z67 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv|
+Z68 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_flattened.sv|
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+Xcore_flattened_sv_unit
+R1
+Z69 V<QX1gJDo>X9VLZ4jLZ]0`0
+r1
+31
+Z70 !s100 dl<AQDa[Qi?[`YY9kl[RQ1
+Z71 I<QX1gJDo>X9VLZ4jLZ]0`0
+S1
+R7
+R19
+R64
+R65
+R20
+L1 53
+R11
+R66
+R67
+R68
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xcore_sv_unit
+R1
+Z72 V[VVL=30IS=[Vncj3TkjU;0
+r1
+!s85 0
+31
+!i10b 1
+Z73 !s100 <eEL4`O1^9VJ<?UM@AhZ23
+Z74 I[VVL=30IS=[Vncj3TkjU;0
+!i103 1
+S1
+R7
+R52
+R53
+R54
+R20
+L1 53
+R11
+R55
+R56
+R57
+!s101 -O0
+R15
+vcore_tb
+R1
+Z75 DXx4 work 15 core_tb_sv_unit 0 22 HN0YEeNMU[VJaikb:N<_f2
+Z76 VlN3iUPNV?OYGNgj@DJaoE2
+r1
+31
+Z77 !s100 S[la:6ea4Ma?oH0haM^4?0
+Z78 IIJH>[h21?kfO2^jfdO;d01
+Z79 !s105 core_tb_sv_unit
+S1
+R7
+Z80 w1430430413
+Z81 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv
+Z82 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv
+L0 17
+R11
+Z83 !s108 1431918758.337000
+Z84 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv|
+Z85 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/core_tb.sv|
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+Xcore_tb_sv_unit
+R1
+Z86 VHN0YEeNMU[VJaikb:N<_f2
+r1
+31
+Z87 !s100 bLd?jVA1GWz46h>_:d0b00
+Z88 IHN0YEeNMU[VJaikb:N<_f2
+S1
+R7
+R19
+R81
+R82
+R20
+L1 53
+R11
+R83
+R84
+R85
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vdata_mem
+R1
+Z89 DXx4 work 16 data_mem_sv_unit 0 22 LGR2T90IQJ^Gz?FFYlS4_1
+Z90 VJTgBNdnj9c=zg80[gUozo3
+r1
+31
+Z91 !s100 <;Nl8Rcc0gV@zfmT<jVAl1
+Z92 Iek`=8]?nRDahSXM@Sc8eJ2
+Z93 !s105 data_mem_sv_unit
+S1
+R7
+R63
+Z94 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv
+Z95 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv
+L0 11
+R11
+Z96 !s108 1431918758.462000
+Z97 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv|
+Z98 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/data_mem.sv|
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+Xdata_mem_sv_unit
+R1
+Z99 VLGR2T90IQJ^Gz?FFYlS4_1
+r1
+31
+Z100 !s100 cFf9nNd^2akn>9Oc18V1W1
+Z101 ILGR2T90IQJ^Gz?FFYlS4_1
+S1
+R7
+R19
+R94
+R95
+R20
+L1 53
+R11
+R96
+R97
+R98
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xdefinitions_sv_unit
+R1
+Z102 I<:TKAD:5O6Q]CYOgURK[03
+Z103 V<:TKAD:5O6Q]CYOgURK[03
+S1
+R7
+R19
+Z104 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv
+Z105 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv
+L0 53
+R11
+r1
+31
+R15
+Z106 !s100 QbUJC_djMOnFhfY?ZK;2B0
+Z107 !s108 1431918758.587000
+Z108 !s107 C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv|
+Z109 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/definitions.sv|
+!i10b 1
+!i103 1
+!s85 0
+!s101 -O0
+vinstr_mem
+R1
+Z110 DXx4 work 17 instr_mem_sv_unit 0 22 F1^44a`VD2`^iGlOM1zci2
+Z111 VDQ?^WH[FcZb76a^THbzWH0
+r1
+31
+Z112 IzM=jzQU832eeO>iVjmPXS1
+Z113 !s105 instr_mem_sv_unit
+S1
+R7
+Z114 w1431629351
+Z115 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv
+Z116 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv
+L0 5
+R11
+Z117 !s108 1431918758.727000
+Z118 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv|
+Z119 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/instr_mem.sv|
+R15
+Z120 !s100 4MQ2c9clc1AmW?][fn:UU1
+!s85 0
+!i10b 1
+!s101 -O0
+Xinstr_mem_sv_unit
+R1
+Z121 VF1^44a`VD2`^iGlOM1zci2
+r1
+31
+Z122 !s100 LSl`hD82PZ8U2:70?MdN33
+Z123 IF1^44a`VD2`^iGlOM1zci2
+S1
+R7
+R19
+R115
+R116
+R20
+L1 53
+R11
+R117
+R118
+R119
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vminer_tb
+R1
+Z124 DXx4 work 16 miner_tb_sv_unit 0 22 X6[^X>=j:L55V2]zYIg8J2
+Z125 VmUcjK`[BR2I4D=oC[X9C`0
+r1
+31
+Z126 !s100 d_DoH7XI2PcEg_Y<[C7T71
+Z127 I3HR6Al@O]UkcdRaIV0C[10
+Z128 !s105 miner_tb_sv_unit
+S1
+R7
+Z129 w1430952254
+Z130 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv
+Z131 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv
+L0 21
+R11
+Z132 !s108 1431918758.837000
+Z133 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv|
+Z134 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/miner_tb.sv|
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+Xminer_tb_sv_unit
+R1
+Z135 VX6[^X>=j:L55V2]zYIg8J2
+r1
+31
+Z136 !s100 j=Y[PZBi;U1TjDKz`<WLU2
+Z137 IX6[^X>=j:L55V2]zYIg8J2
+S1
+R7
+R19
+R130
+R131
+R20
+L1 53
+R11
+R132
+R133
+R134
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+Xnet_packet_logger_s_sv_unit
+R1
+Z138 V>F;dW@_PQDjoMCB_[e`Jc3
+r1
+31
+Z139 !s100 78a=``_D?d9eJ2`PA?6PE2
+Z140 I>F;dW@_PQDjoMCB_[e`Jc3
+S1
+R7
+R19
+Z141 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv
+Z142 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv
+R20
+L1 53
+R11
+Z143 !s108 1431918758.946000
+Z144 !s107 definitions.sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv|
+Z145 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/net_packet_logger_s.sv|
+R15
+!s85 0
+!i10b 1
+!i103 1
+!s101 -O0
+vnetwork_packet_s_logger
+R1
+Z146 DXx4 work 27 net_packet_logger_s_sv_unit 0 22 >F;dW@_PQDjoMCB_[e`Jc3
+Z147 VPlgif>=;4=jBTE<GHm7GV1
+r1
+31
+Z148 !s100 ADO8AZWHGnHe2S2k9X3n`1
+Z149 IM4k]ZD0GakH;9?2jmabMF1
+Z150 !s105 net_packet_logger_s_sv_unit
+S1
+R7
+R63
+R141
+R142
+L0 8
+R11
+R143
+R144
+R145
+R15
+!s85 0
+!i10b 1
+!s101 -O0
+vreg_file
+R1
+Z151 Io[;Ai1kK]TY9li@Al2Uog1
+Z152 Vb`o]mdF;RMO@U85_NB<MK0
+Z153 !s105 reg_file_sv_unit
+S1
+R7
+Z154 w1431830965
+Z155 8C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv
+Z156 FC:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv
+L0 2
+R11
+r1
+31
+R15
+!i10b 1
+Z157 !s100 =7DeMXTQEHDW;bbXkMIi[1
+!s85 0
+Z158 !s108 1431918759.055000
+Z159 !s107 C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv|
+Z160 !s90 -reportprogress|300|-work|work|-sv|C:/Users/Steven/Desktop/cse 141L Lab 3/3 stage pipeline/reg_file.sv|
+!s101 -O0
