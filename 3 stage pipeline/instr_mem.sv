@@ -15,11 +15,20 @@ instruction_s [(2**addr_width_p)-1:0] mem;
                                     
 always_ff @ (posedge clk)
   begin
-    if (wen_i)
+    if (wen_i) begin
+	  //$display("******************************");
+	  //$display("mem[%d] <= %d", addr_i, instruction_i.opcode);
       mem[addr_i] <= instruction_i;
-	else if (nop_i) //insert nop instruction
+	end
+	else if (nop_i) begin //insert nop instruction
+	  //$display("******************************");
+	  //$display("NOP");
 	  instruction_o <= 0;
-    else
+	end
+    else begin 
+	  //$display("******************************");
+	  //$display("%d <= mem[%d]", mem[addr_i].opcode, addr_i);
       instruction_o <= mem[addr_i];
+	end
   end
 endmodule

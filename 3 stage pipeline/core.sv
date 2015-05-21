@@ -40,8 +40,6 @@ logic jump_now;
 
 // controller output signals
 logic valid_to_mem_c, PC_wen, PC_wen_r;
-//control signal output from decode module
-ctrl_sigs ctrl_sig_o;
 
 // Handshake protocol signals for memory
 logic yumi_to_mem_c;
@@ -76,12 +74,15 @@ assign net_packet_o = net_packet_i;
 // DEBUG Struct
 assign debug_o = {PC_r, instruction, state_r, barrier_mask_r, barrier_r};
 
-// NEW: pipe register structs
+// pipe register structs
 IF_ID_reg IF_ID_r, IF_ID_n;
 ID_EX_reg ID_EX_r, ID_EX_n;
 
-// NEW: nop counter, used to add 2 nops after every instruction
-logic [1:0] nop_ctr; //0,1,2
+//control signal output from decode module
+ctrl_sigs ctrl_sig_o;
+
+// nop_ctr used to add 2 nop per instruction read
+logic [1:0] nop_ctr; 
 logic nop;
 assign nop = (nop_ctr != 0);
 
@@ -91,7 +92,7 @@ assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 
 // Determine next PC
 assign imm_jump_add = $signed(instruction.rs_imm) + $signed(PC_r);
-assign PC_wen = net_PC_write_cmd_IDLE || ~stall;
+assign PC_wen = net_PC_write_cmd_IDLE || ~stall;// || !nop;
 assign pc_plus1 = PC_r + 1'b1;
 
 // Next pc is based on network or the instruction
@@ -100,7 +101,7 @@ always_comb
     PC_n = nop ? PC_r : pc_plus1; // don't change PC on nop
     if (net_PC_write_cmd_IDLE)
       PC_n = net_packet_i.net_addr;
-    else            //ID_EX_r.instruction
+    else           
       unique casez (ID_EX_r.instruction) // branches and jumps happen in execute stage
         `kJALR:
           PC_n = alu_result[0+:imem_addr_width_p];
@@ -111,6 +112,12 @@ always_comb
 
         default: begin end
       endcase
+	//$display("******");
+	//if(nop) 
+	//   $display("NOP");
+	//else 
+	//   $display("OP");
+	//$display("PC = %d", PC_n);
   end
 
 // Selection between network and core for instruction address
@@ -125,19 +132,19 @@ instr_mem #(.addr_width_p(imem_addr_width_p)) imem
            ,.nop_i(nop)
            ,.instruction_o(imem_out)
            );
-          
+
 // next pipeline register
 assign IF_ID_n.instruction = instruction;
 assign IF_ID_n.imm_jump_add = imm_jump_add;
 assign IF_ID_n.pc_plus1 = pc_plus1;
 
-// Decode module                 //IF_ID_r.instruction
+// Decode module                 
 cl_decode decode (.instruction_i(IF_ID_r.instruction)
                   ,.ctrl_sigs_o(ctrl_sigs_o)
                   );
                   
-// State machine                                //IF_ID_r.instruction
-cl_state_machine state_machine (.instruction_i(IF_ID_r.instruction)
+// State machine                                
+cl_state_machine state_machine (.instruction_i(ID_EX_r.instruction)
                                ,.state_i(state_r)
                                ,.exception_i(exception_o)
                                ,.net_PC_write_cmd_IDLE_i(net_PC_write_cmd_IDLE)
@@ -147,10 +154,10 @@ cl_state_machine state_machine (.instruction_i(IF_ID_r.instruction)
  
 // Register write could be from network or the controller
 // writes occur in the execute stage
-assign rf_wen    = (net_reg_write_cmd || (ID_EX_r.ctrl_sigs.op_writes_rf_c && ~stall));
+assign rf_wen    = net_reg_write_cmd || (ID_EX_r.ctrl_sigs.op_writes_rf_c && ~stall);
  
 // register file addresses   
-
+assign rs_addr = IF_ID_r.instruction.rs_imm;
 
 // Selection between network and address included in the instruction which is exeuted
 // Address for Reg. File is shorter than address of Ins. memory in network data
@@ -158,19 +165,19 @@ assign rf_wen    = (net_reg_write_cmd || (ID_EX_r.ctrl_sigs.op_writes_rf_c && ~s
 // assign rd_addr = IF_ID_r.instruction.rs_imm;but for the destination register in an instruction the extra bits must be zero
 assign rd_addr = (net_reg_write_cmd)
                  ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}}
-                    ,{IF_ID_r.instruction.rd}});
-                     //IF_ID_r.instruction.rd
+                 : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}},
+                    {IF_ID_r.instruction.rd}});
+                    
 					 
 // writes occur in the execute stage
 assign wa_addr = (net_reg_write_cmd)
     ? (net_packet_i.net_addr [0+:($bits(instruction.rs_imm))])
-    : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)),{1'b0}},
+    : ({{($bits(instruction.rs_imm)-$bits(instruction.rd)){1'b0}},
        {ID_EX_r.instruction.rd}});
                        
 // Register file
 reg_file #(.addr_width_p($bits(instruction.rs_imm))) rf
-          (.clk(clk)
+          (.clk
           ,.wen_i(rf_wen)
           ,.wa_i(wa_addr)
           ,.write_data_i(rf_wd)
@@ -191,6 +198,7 @@ assign ID_EX_n.rs_val_or_zero = rs_val_or_zero;
 assign ID_EX_n.rd_val_or_zero = rd_val_or_zero;
 assign ID_EX_n.imm_jump_add = IF_ID_r.imm_jump_add;
 assign ID_EX_n.pc_plus1 = IF_ID_r.pc_plus1;
+
 
 // ALU
 alu alu_1 (.rd_i(ID_EX_r.rd_val_or_zero)
@@ -228,10 +236,8 @@ always_comb
   end
   
 // Sequential part, including PC, barrier, exception and state
-always_ff @ (posedge clk)
-  begin
-    if (!reset)
-      begin
+always_ff @ (posedge clk) begin
+    if (!reset) begin
         PC_r            <= 0;
         barrier_mask_r  <= {(mask_length_gp){1'b0}};
         barrier_r       <= {(mask_length_gp){1'b0}};
@@ -240,25 +246,20 @@ always_ff @ (posedge clk)
         PC_wen_r        <= 0;
         exception_o     <= 0;
         mem_stage_r     <= 2'b00;
+		
         // pipeline registers
         IF_ID_r <= 0;
         ID_EX_r <= 0;
         
         nop_ctr <= 0;
-      end
-    else 
-      begin
+    end
+    else begin
         nop_ctr <= (nop_ctr +1)%3;
+		
         if (PC_wen) begin
-          PC_r         <= PC_n;
-          
-          
-          
-          
-          
-          
-          
-          if (net_PC_write_cmd_IDLE) begin 
+          PC_r <= PC_n;
+		  
+		  if (net_PC_write_cmd_IDLE) begin 
             IF_ID_r <= 0;
             ID_EX_r <= 0;
           end
@@ -267,6 +268,7 @@ always_ff @ (posedge clk)
             ID_EX_r <= ID_EX_n;
           end
         end
+		
         barrier_mask_r <= barrier_mask_n;
         barrier_r      <= barrier_n;
         state_r        <= state_n;
@@ -274,7 +276,7 @@ always_ff @ (posedge clk)
         PC_wen_r       <= PC_wen;
         exception_o    <= exception_n;
         mem_stage_r    <= mem_stage_n;
-      end
+    end
   end
 
 // stall and memory stages signals
@@ -325,11 +327,6 @@ assign barrier_o = barrier_mask_r & barrier_r;
 
 // The instruction write is just for network
 assign imem_wen  = net_imem_write_cmd;
-
-
-
-
-
 
 // Instructions are shorter than 32 bits of network data
 assign net_instruction = net_packet_i.net_data [0+:($bits(instruction))];
