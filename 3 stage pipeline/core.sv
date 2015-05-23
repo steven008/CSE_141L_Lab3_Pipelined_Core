@@ -29,7 +29,7 @@ instruction_s instruction, imem_out, instruction_r;
 logic [31:0] alu_result, rs_val_or_zero, rd_val_or_zero, rs_val, rd_val;
 
 // Reg. File address
-logic [($bits(instruction.rs_imm))-1:0] rd_addr, wa_addr, rs_addr;
+logic [($bits(instruction.rs_imm))-1:0] wa_addr, rs_addr, rd_addr;
 
 // Data for Reg. File signals
 logic [31:0] rf_wd;
@@ -108,7 +108,7 @@ always_comb
 
         `kBNEQZ,`kBEQZ,`kBLTZ,`kBGTZ:
           if (jump_now)
-            PC_n = imm_jump_add;
+            PC_n = ID_EX_r.imm_jump_add;
 
         default: begin end
       endcase
