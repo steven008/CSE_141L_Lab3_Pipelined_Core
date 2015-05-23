@@ -18,7 +18,7 @@ assign rd_val_o = RF [rd_addr_i];
 always_ff @ (posedge clk)
   begin
     if (wen_i)
-      RF [rd_addr_i] <= write_data_i;
+      RF [wa_i] <= write_data_i;
   end
 
 endmodule
