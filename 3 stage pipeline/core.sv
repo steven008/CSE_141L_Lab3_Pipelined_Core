@@ -92,7 +92,7 @@ assign instruction = (PC_wen_r) ? imem_out : instruction_r;
 
 // Determine next PC
 assign imm_jump_add = $signed(instruction.rs_imm) + $signed(PC_r);
-assign PC_wen = net_PC_write_cmd_IDLE || ~stall;// || !nop;
+assign PC_wen = net_PC_write_cmd_IDLE || ~stall || !nop;
 assign pc_plus1 = PC_r + 1'b1;
 
 // Next pc is based on network or the instruction
