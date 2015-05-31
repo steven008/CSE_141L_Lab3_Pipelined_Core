@@ -259,7 +259,7 @@ always_ff @ (posedge clk) begin
         if (PC_wen) begin
           PC_r <= PC_n;
 		  
-		  if (net_PC_write_cmd_IDLE) begin 
+          if (net_PC_write_cmd_IDLE) begin 
             IF_ID_r <= 0;
             ID_EX_r <= 0;
           end
